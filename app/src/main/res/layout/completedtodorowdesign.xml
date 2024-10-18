@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rawDesign"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="11dp"
+    android:layout_marginBottom="55dp"
+    android:background="@drawable/rounded_corner"
+    android:backgroundTint="#B420305F">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        app:layout_constraintGuide_begin="2dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="1dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:id="@+id/DropMenueTogile"
+        android:layout_width="70dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="80dp"
+
+
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="#BEFFC1"
+        app:layout_constraintBottom_toTopOf="@+id/dropMenue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.419"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/RowTitle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Title"
+        android:textColor="#93DEFF"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_right"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/RowContent"
+        android:layout_width="217dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="50sp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10sp"
+        android:text="prief content"
+        android:textColor="#93DEFF"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/VerticaclLine"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_right"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/VerticaclLine"
+        android:layout_width="13dp"
+        android:layout_height="99dp"
+        android:background="@drawable/verical_line"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/DeleteButton" />
+
+    <Button
+        android:id="@+id/DeleteButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#D9919F"
+        android:drawableLeft="@drawable/baseline_delete_forever_24"
+        android:text="Delete"
+        android:textSize="12sp"
+
+
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/View"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#91AED9"
+        android:drawableLeft="@drawable/round_open_in_full_24"
+        android:text="open"
+        android:textSize="12sp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/DeleteButton"
+        app:layout_constraintTop_toBottomOf="@+id/DeleteButton"
+        app:layout_constraintVertical_bias="0.009" />
+
+    <TextView
+        android:id="@+id/horizontalLine"
+        android:layout_width="211dp"
+        android:layout_height="7dp"
+        android:layout_marginBottom="5dp"
+        android:background="#F7F7F7"
+        android:text="-"
+        android:textColor="@color/black"
+        android:textSize="50dp"
+
+        app:layout_constraintBottom_toTopOf="@id/RowContent"
+        app:layout_constraintEnd_toStartOf="@id/VerticaclLine"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_right"
+        app:layout_constraintTop_toBottomOf="@id/RowTitle"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/dropMenue"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:visibility="gone"
+        android:background="#AB000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        tools:ignore="MissingConstraints">
+
+
+        <Button
+            android:id="@+id/ActivateAlarm"
+            android:layout_width="54dp"
+            android:layout_height="159dp"
+            android:backgroundTint="#4D284197"
+            android:drawableTop="@drawable/baseline_alarm_on_24"
+android:visibility="invisible"
+            android:allowClickWhenDisabled="false"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.929"
+            app:layout_constraintStart_toStartOf="@+id/DropMenuehorizontalLine"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.512" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+            app:layout_constraintEnd_toStartOf="@+id/ActivateAlarm"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/DropMenuehorizontalLine"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.41">
+
+            <TextView
+                android:id="@+id/strtTimeView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="4dp"
+                android:text="Start time:"
+                android:textColor="#93DEFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/strtTimeClock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="4dp"
+                android:text="time"
+                android:textColor="#93DEFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="48dp"
+            app:layout_constraintBottom_toTopOf="@+id/Todocompleted"
+            app:layout_constraintEnd_toStartOf="@+id/ActivateAlarm"
+
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/DropMenuehorizontalLine">
+
+            <TextView
+                android:id="@+id/endTimeView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="2dp"
+                android:text="End time  :"
+                android:textColor="#93DEFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/endTimeClock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="2dp"
+                android:text="time"
+                android:textColor="#93DEFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/DropMenuehorizontalLine"
+            android:layout_width="303dp"
+            android:layout_height="8dp"
+
+            android:background="#F7F7F7"
+            android:text="-"
+            android:textColor="@color/black"
+
+
+            android:textSize="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.63" />
+
+        <Button
+            android:id="@+id/Todocompleted"
+            android:layout_width="101dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#D9919F"
+
+            android:drawableTop="@drawable/baseline_cancel_24"
+            app:layout_constraintBottom_toBottomOf="@+id/ActivateAlarm"
+            app:layout_constraintEnd_toEndOf="@+id/DropMenuehorizontalLine"
+            app:layout_constraintHorizontal_bias="0.767"
+            app:layout_constraintStart_toStartOf="@+id/DropMenuehorizontalLine"
+            app:layout_constraintTop_toBottomOf="@+id/DropMenuehorizontalLine"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

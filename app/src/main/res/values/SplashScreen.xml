@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.AnimatedSplash.Mysplash" parent="Theme.SplashScreen" xmlns:tools="http://schemas.android.com/tools" >
+
+        <!-- Set the background color of the splash screen -->
+        <item name="windowSplashScreenBackground">#1E1E1E</item>
+
+        <!-- Specify the theme to apply after the splash screen -->
+        <item name="postSplashScreenTheme">@style/Theme.TodoApp</item>
+
+        <item name="windowSplashScreenAnimatedIcon">@drawable/avd_anim</item>
+
+        <item name="windowSplashScreenAnimationDuration">4500</item>
+    </style>
+
+</resources>

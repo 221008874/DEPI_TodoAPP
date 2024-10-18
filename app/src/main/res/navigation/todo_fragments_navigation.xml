@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/todo_fragments_navigation"
+    app:startDestination="@id/authantication">
+
+    <fragment
+        android:id="@+id/registration"
+        android:name="com.abdoahmed.todoapp.Registration"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registration_to_authantication"
+            app:destination="@id/authantication"
+            app:enterAnim="@anim/to_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/from_right" >
+
+
+        </action>
+
+
+        <action
+            android:id="@+id/action_registration_to_mainBage"
+            app:destination="@id/mainBage"
+            app:enterAnim="@anim/__to_top"
+            app:exitAnim="@anim/__to_bottom"
+            app:popEnterAnim="@anim/__from_bottom"
+            app:popExitAnim="@anim/__from_top">
+
+
+
+        </action>
+        <argument
+            android:name="username"
+            app:argType="string"
+            app:nullable="true" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/authantication"
+        android:name="com.abdoahmed.todoapp.Authantication"
+        android:label="fragment_authantication"
+        tools:layout="@layout/fragment_authantication" >
+        <action
+            android:id="@+id/action_authantication_to_registration"
+            app:destination="@id/registration"
+            app:enterAnim="@anim/to_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/from_right" >
+
+
+        </action>
+        <action
+            android:id="@+id/action_authantication_to_mainBage"
+            app:destination="@id/mainBage">
+
+
+        </action>
+
+        <argument
+            android:name="username"
+            app:argType="string"
+            app:nullable="true" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/mainBage"
+        android:name="com.abdoahmed.todoapp.MainBage"
+        android:label="fragment_main_bage"
+        tools:layout="@layout/fragment_main_bage" >
+        <action
+            android:id="@+id/action_mainBage_to_authantication"
+            app:destination="@id/authantication" />
+
+        <argument
+            android:name="username"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_mainBage_to_addNewTodo3"
+            app:destination="@id/addNewTodo3"
+
+            />
+        <action
+            android:id="@+id/action_mainBage_to_viewTodoOrUpdate"
+            app:destination="@id/viewTodoOrUpdate"
+
+            />
+        <action
+            android:id="@+id/action_mainBage_to_settings2"
+            app:destination="@id/settings2" />
+
+        <action
+            android:id="@+id/action_mainBage_to_completedTodos"
+            app:destination="@id/completedTodos" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewTodo3"
+        android:name="com.abdoahmed.todoapp.MainBageOP.AddNewTodo"
+        android:label="fragment_add_new_todo"
+        tools:layout="@layout/fragment_add_new_todo" >
+        <argument
+            android:name="username"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_addNewTodo3_to_mainBage"
+            app:destination="@id/mainBage" />
+        <action
+            android:id="@+id/action_addNewTodo3_to_alarmStart"
+            app:destination="@id/alarmStart" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewTodoOrUpdate"
+        android:name="com.abdoahmed.todoapp.MainBageOP.ViewTodoOrUpdate"
+        android:label="fragment_view_todo_or_update"
+        tools:layout="@layout/fragment_view_todo_or_update" >
+        <action
+            android:id="@+id/action_viewTodoOrUpdate_to_mainBage"
+            app:destination="@id/mainBage" />
+        <argument
+            android:name="TodoID"
+            app:argType="integer" />
+        <argument
+            android:name="updateState"
+            app:argType="boolean" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/settings2"
+        android:name="com.abdoahmed.todoapp.Settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settings2_to_mainBage"
+            app:destination="@id/mainBage" />
+        <argument
+            android:name="username"
+            app:argType="string" />
+        <argument
+            android:name="navFlag"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_settings2_to_completedTodos2"
+            app:destination="@id/completedTodos" />
+    </fragment>
+    <fragment
+        android:id="@+id/alarmStart"
+        android:name="com.abdoahmed.todoapp.TaskAlarm.AlarmInputs"
+        android:label="fragment_alarm_start"
+        tools:layout="@layout/fragment_alarm_start_time" >
+        <action
+            android:id="@+id/action_alarmStart_to_addNewTodo3"
+            app:destination="@id/addNewTodo3" />
+        <argument
+            android:name="username"
+            app:argType="string" />
+        <argument
+            android:name="Title"
+            app:argType="string" />
+        <argument
+            android:name="content"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_alarmStart_to_mainBage"
+            app:destination="@id/mainBage" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/completedTodos"
+        android:name="com.abdoahmed.todoapp.completedTodoOP.CompletedTodos"
+        android:label="fragment_completed_todos"
+        tools:layout="@layout/fragment_completed_todos" >
+        <action
+            android:id="@+id/action_completedTodos_to_mainBage"
+            app:destination="@id/mainBage" />
+        <argument
+            android:name="username"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_completedTodos_to_viewCompletedTodos"
+            app:destination="@id/viewCompletedTodos" />
+        <action
+            android:id="@+id/action_completedTodos_to_authantication"
+            app:destination="@id/authantication" />
+        <action
+            android:id="@+id/action_completedTodos_to_settings2"
+            app:destination="@id/settings2" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/viewCompletedTodos"
+        android:name="com.abdoahmed.todoapp.completedTodoOP.ViewCompletedTodos"
+        android:label="fragment_view_completed_todos"
+        tools:layout="@layout/fragment_view_completed_todos" >
+        <action
+            android:id="@+id/action_viewCompletedTodos_to_completedTodos"
+            app:destination="@id/completedTodos" />
+        <argument
+            android:name="TodoID"
+            app:argType="integer" />
+        <argument
+            android:name="updateState"
+            app:argType="boolean" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/alarmTirigered"
+        android:name="com.abdoahmed.todoapp.AlarmTriggered"
+        android:label="fragment_alarm_tirigered"
+        tools:layout="@layout/fragment_alarm_tirigered" >
+
+        <argument
+            android:name="todoID"
+            app:argType="integer"
+            android:defaultValue="0"/>
+        <argument
+            android:name="username"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="alarmType"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_alarmTirigered_to_mainBage"
+            app:destination="@id/mainBage" />
+
+    </fragment>
+
+
+    <action
+        android:id="@+id/action_global_alarmTriggered"
+        app:destination="@id/alarmTirigered" />
+
+
+
+</navigation>

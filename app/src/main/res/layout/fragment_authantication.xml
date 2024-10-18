@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Authantication"
+    android:background="@android:color/transparent"
+    >
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:backgroundTint="@color/material_on_surface_disabled"
+
+        >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100sp"
+            android:layout_height="120sp"
+            android:src="@drawable/croped_logo_removebg_"
+            app:layout_constraintStart_toEndOf="@id/guideline_vertical_right"
+            app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_top"
+            />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="20dp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_horizontal_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+
+            />
+
+        <EditText
+            android:id="@+id/username_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/material_on_primary_emphasis_medium"
+            android:hint="enter your username"
+            android:inputType="text"
+            android:paddingStart="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline_vertical_right"
+            app:layout_constraintTop_toBottomOf="@id/logo"
+            android:layout_marginTop="100dp"
+
+            tools:layout_editor_absoluteY="310dp" />
+
+        <EditText
+            android:inputType="textPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/password_input"
+            app:layout_constraintStart_toEndOf="@id/guideline_vertical_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/username_input"
+            android:hint="enter your password"
+            android:textColorHint="@color/white"
+            android:background="@drawable/rounded_corner"
+            android:paddingTop="20dp"
+
+            android:paddingStart="20dp"
+
+            android:paddingBottom="20dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/material_on_primary_emphasis_medium"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Login_button"
+            android:hint="Login"
+            android:textColorHint="@color/white"
+            app:layout_constraintStart_toStartOf="@id/guideline_vertical_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/password_input"
+            android:layout_marginTop="40dp"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            android:backgroundTint="@color/design_default_color_secondary_variant"
+
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/signin_button"
+            android:hint="sign in"
+            android:textColorHint="@color/white"
+            app:layout_constraintStart_toStartOf="@id/guideline_vertical_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Login_button"
+            android:layout_marginTop="30dp"
+            android:paddingStart="60dp"
+            android:paddingEnd="60dp"
+
+            android:backgroundTint="@color/material_on_surface_stroke"
+
+            />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:text="Login"
+            android:textSize="25sp"
+            android:textColor="#E29DB8"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline_vertical_right"
+            app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_top"
+
+            />
+
+
+        <TextView
+            android:id="@+id/MessageToUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:text="Wellcome"
+            android:layout_marginBottom="20dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline_vertical_right"
+            android:backgroundTint="@color/material_on_primary_emphasis_medium"
+            app:layout_constraintBottom_toTopOf="@id/username_input"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
+</layout>

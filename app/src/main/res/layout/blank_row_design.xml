@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="0dp"
+    android:id="@+id/rawDesign"
+android:visibility="invisible"
+    android:background="@drawable/rounded_corner"
+    android:backgroundTint="@color/design_default_color_secondary">
+
+    <Button
+        android:id="@+id/Todocompleted"
+        android:layout_width="240dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#91D99B"
+        android:drawableTop="@drawable/baseline_done_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.304"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ActivateAlarm"
+        android:layout_width="51dp"
+        android:layout_height="162dp"
+        android:backgroundTint="#D9919F"
+        android:drawableTop="@drawable/baseline_alarm_on_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.304"
+
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="390dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="392dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/RowTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Title"
+        android:textColor="#6F5481"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_right"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/RowContent"
+        android:layout_width="83dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="0sp"
+        android:layout_marginTop="50sp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10sp"
+        android:text="prief content"
+        android:textColor="#FF6F5481"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/VerticaclLine"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical_right"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/VerticaclLine"
+        android:layout_width="13dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginEnd="19dp"
+        android:background="@drawable/verical_line"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vertical_left"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_right"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/DeleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/VerticaclLine"
+        app:layout_constraintEnd_toStartOf="@id/guideline_vertical_left"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="#91AED9"
+        android:drawableLeft="@drawable/baseline_delete_forever_24"
+        android:text="Delete"
+        />
+
+    <Button
+        android:id="@+id/View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/VerticaclLine"
+        app:layout_constraintEnd_toStartOf="@id/guideline_vertical_left"
+        app:layout_constraintTop_toBottomOf="@id/DeleteButton"
+        android:backgroundTint="#91AED9"
+        android:drawableLeft="@drawable/round_open_in_full_24"
+        android:text=" open "
+
+
+        />
+
+    <TextView
+        android:layout_width="111dp"
+        android:layout_height="10dp"
+        android:background="@color/black"
+        android:text="-"
+        android:textColor="@color/black"
+        android:textSize="100dp"
+
+
+        app:layout_constraintBottom_toTopOf="@id/RowContent"
+
+        app:layout_constraintEnd_toStartOf="@id/VerticaclLine"
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_right"
+        app:layout_constraintTop_toBottomOf="@id/RowTitle"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/DropMenueTogile"
+        android:layout_width="70dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="76dp"
+
+
+        android:backgroundTint="#BEFFC1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <LinearLayout
+        android:id="@+id/dropMenue"
+        android:layout_width="408dp"
+        android:layout_height="197dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/black"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_right"
+
+        android:visibility="gone"
+        >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/strtTimeView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
+                android:text="Start time:"
+                android:textColor="#93FF95"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/strtTimeClock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="4dp"
+                android:text="time"
+                android:textColor="#93FF95"
+                android:textSize="20sp"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/endTimeView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="2dp"
+                android:text="End time  :"
+                android:textColor="#E61515"
+                android:textSize="20sp"
+                />
+
+
+            <TextView
+                android:id="@+id/endTimeClock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+
+                android:layout_marginTop="2dp"
+                android:text="time"
+                android:textColor="#E61515"
+                android:textSize="20sp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/DropMenuehorizontalLine"
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="0dp"
+            android:background="#F7F7F7"
+            android:text="-"
+            android:textColor="@color/black"
+            android:textSize="50dp"
+
+
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/StartDateView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="2dp"
+                android:text="Start date:"
+                android:textColor="#93FF95"
+                android:textSize="20sp"
+                />
+
+
+            <TextView
+                android:id="@+id/StartDateClock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+
+                android:layout_marginTop="2dp"
+                android:text="Date"
+                android:textColor="#93FF95"
+                android:textSize="20sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/endDateView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="2dp"
+                android:text="End Date :"
+                android:textColor="#E61515"
+                android:textSize="20sp"
+
+
+
+
+                />
+
+
+            <TextView
+                android:id="@+id/endDateClock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+
+                android:layout_marginTop="2dp"
+                android:text="Date"
+                android:textColor="#E61515"
+                android:textSize="20sp"
+
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
