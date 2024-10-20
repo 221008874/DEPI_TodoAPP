@@ -1,6 +1,7 @@
 package com.abdoahmed.todoapp.recycular_view_Adapter
 import android.animation.ValueAnimator
 import android.graphics.Color
+import android.graphics.Color.rgb
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -54,7 +55,7 @@ class RecycularViewAdapter(private val arr: ArrayList<TodoDataEntity>,private va
 
         for (Item in arr){
             if (arr[position].isActivated==1){
-                holder.alramAcivate.setBackgroundColor(Color.GREEN)
+                holder.alramAcivate.setBackgroundColor(Color.rgb(204,247,255))
             }
             else{
                 holder.alramAcivate.setBackgroundColor(Color.GRAY)
@@ -245,7 +246,7 @@ class RecycularViewAdapter(private val arr: ArrayList<TodoDataEntity>,private va
 
                 // Call the method to create calendar operations, which will set the alarms
                 alarm.createCalenderOp()
-                activate.setBackgroundColor(Color.GREEN)
+                activate.setBackgroundColor(Color.rgb(204,247,255))
                 // Provide user feedback (optional)
                 Toast.makeText(view.context, "Alarm set for ${selectedItem.Title}", Toast.LENGTH_SHORT).show()
             }

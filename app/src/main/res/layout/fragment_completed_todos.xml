@@ -17,35 +17,34 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    >
+                    android:background="#E9E6E4">
 
                     <TextView
                         android:id="@+id/title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="40dp"
                         android:paddingBottom="20dp"
                         android:text="Completed todos"
-                        android:textColor="#E29DB8"
+                        android:textColor="#331936"
                         android:textSize="25sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toTopOf="@+id/layoutOfResView"
                         app:layout_constraintEnd_toEndOf="parent"
 
-                        app:layout_constraintHorizontal_bias="0.618"
-                        app:layout_constraintStart_toEndOf="@id/guideline_vertical_right"
+                        app:layout_constraintHorizontal_bias="0.247"
+                        app:layout_constraintStart_toEndOf="@+id/logo"
                         app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_top"
-                        app:layout_constraintVertical_bias="0.0" />
+                        tools:layout_editor_absoluteX="132dp"
+                        tools:layout_editor_absoluteY="64dp" />
 
                     <androidx.appcompat.widget.Toolbar
                         android:id="@+id/toolbar"
                         android:layout_width="411dp"
                         android:layout_height="48dp"
-                        android:background="#32000000"
+                        android:background="#E9E6E4"
                         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                         tools:ignore="MissingConstraints"
-                        tools:layout_editor_absoluteX="0dp"
-                        >
+                        tools:layout_editor_absoluteX="0dp">
 
 
                     </androidx.appcompat.widget.Toolbar>
@@ -53,14 +52,13 @@
 
                     <ImageView
                         android:id="@+id/logo"
-                        android:layout_width="100sp"
-                        android:layout_height="120sp"
-                        android:layout_marginBottom="50dp"
+                        android:layout_width="79dp"
+                        android:layout_height="68dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
                         android:src="@drawable/croped_logo_removebg_"
                         app:layout_constraintStart_toEndOf="@id/guideline_vertical_right"
-                        app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_top"
-                        />
-
+                        app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_top" />
 
                     <androidx.constraintlayout.widget.Guideline
                         android:id="@+id/guideline_vertical_right"
@@ -92,21 +90,20 @@
 
                     <LinearLayout
                         android:id="@+id/layoutOfResView"
-                        android:layout_width="409dp"
-                        android:layout_height="345dp"
-                        android:layout_marginTop="0dp"
+                        android:layout_width="413dp"
+                        android:layout_height="438dp"
                         android:layout_marginBottom="50dp"
                         app:layout_constraintBottom_toTopOf="@id/bottomLayout"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintWidth_percent="0.98"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/logo">
+                        app:layout_constraintTop_toBottomOf="@id/logo"
+                        app:layout_constraintWidth_percent="0.98">
 
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/ResyView"
-                            android:layout_width="390dp"
-                            android:layout_height="345dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             tools:ignore="MissingConstraints"
                             tools:layout_editor_absoluteX="20dp"
                             tools:layout_editor_absoluteY="170dp" />
@@ -115,10 +112,10 @@
 
                     <LinearLayout
                         android:id="@+id/bottomLayout"
-                        android:layout_width="366dp"
-                        android:layout_height="44dp"
+                        android:layout_width="0dp"
+                        android:layout_height="82dp"
                         android:background="@drawable/rounded_corner"
-                        android:backgroundTint="#60186EF2"
+                        android:backgroundTint="#331936"
                         android:gravity="center"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -129,9 +126,11 @@
                             android:id="@+id/Return"
                             android:layout_width="158dp"
                             android:layout_height="wrap_content"
-                            android:backgroundTint="#8C58B1"
+                            android:backgroundTint="#FEFCFB"
                             android:drawableLeft="@drawable/baseline_keyboard_return_24"
                             android:text="Return"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
 
                             />
 

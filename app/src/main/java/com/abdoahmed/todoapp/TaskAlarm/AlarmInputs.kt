@@ -137,7 +137,7 @@ lateinit var bind:FragmentAlarmStartTimeBinding
 
                 val formattedTime = String.format("%02d:%02d", hourOfDay, minute)
                 endTimeFromDialog=formattedTime
-                bind.EndTimeTextView.text = "Selected end Time: $formattedTime"
+                bind.EndTimeTextView.text = "Selected Time: $formattedTime"
             }, currentHour, currentMinute, true
         )
 

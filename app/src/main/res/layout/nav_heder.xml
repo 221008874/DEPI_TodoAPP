@@ -5,16 +5,19 @@
     android:layout_height="170dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#000000"
+    android:background="#331936"
     android:gravity="bottom"
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
+
 
 
     >
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="#E9E6E4"
         >
         <ImageView
             android:id="@+id/logo"
@@ -32,7 +35,10 @@
             android:layout_marginStart="10dp"
             android:layout_marginBottom="10dp"
             android:hint="username"
+            android:textColorHint="#331936"
             android:textSize="15dp"
+            android:textColor="#331936"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@id/logo"
             app:layout_constraintTop_toTopOf="parent"

@@ -8,6 +8,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
+import android.widget.Button
+import android.widget.FrameLayout
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -59,6 +61,9 @@ class MainActivity : AppCompatActivity() {
         lottieBackground.playAnimation()
         lottieBackground.repeatCount = LottieDrawable.INFINITE
         lottieBackground.scaleType = ImageView.ScaleType.CENTER_CROP
+
+
+
 
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
@@ -138,4 +143,8 @@ class MainActivity : AppCompatActivity() {
             context.resources.updateConfiguration(config, context.resources.displayMetrics)
         }
     }
+
+
+
+
 }
